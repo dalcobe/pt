@@ -22,9 +22,9 @@ public class PTUF1UF2UF3 {
         fw = new FileWriter("equips.txt", false);
         bf = new BufferedWriter(fw);
         escritor = new PrintWriter(bf);
-        escritor.println("Madrid 5 2 1 2 8");
-        escritor.println("Barca 5 3 1 1 10");
-        escritor.println("Tàrrega 5 1 3 1 7");
+        escritor.println("Madrid,5,2,1,2,8");
+        escritor.println("Barca,5,3,1,1,10");
+        escritor.println("Tàrrega,5,1,3,1,7");
         escritor.close();
 
         do {
@@ -64,7 +64,7 @@ public class PTUF1UF2UF3 {
     }
 
     static void visualitzarequips() throws IOException {
-         try {
+        try {
             Scanner input = new Scanner(new File("equips.txt"));
             while (input.hasNextLine()) {
                 String line = input.nextLine();
@@ -74,22 +74,22 @@ public class PTUF1UF2UF3 {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-       
-
     }
 
     static void afegirequips() throws SQLException, FileNotFoundException {
-        try(FileWriter fw = new FileWriter("equips.txt", true);
-        BufferedWriter bw = new BufferedWriter(fw);
-        PrintWriter out = new PrintWriter(bw))
-    {
-        //aqui se escriu el nou equip amb les noves puntuacions
-        out.println("");
-        out.println("");
-        out.println("");
-    } catch (IOException e) {
-        
-    }
+        try (FileWriter fw = new FileWriter("equips.txt", true);
+                BufferedWriter bw = new BufferedWriter(fw);
+                PrintWriter out = new PrintWriter(bw)) {
+            //aqui se escriu el nou equip amb les noves puntuacions
+            out.println("");
+            out.println("");
+            out.println("");
+            out.println("");
+            out.println("");
+
+        } catch (IOException e) {
+
+        }
 
     }
 
